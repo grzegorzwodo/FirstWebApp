@@ -12,7 +12,11 @@ public class SimpleServlet extends HttpServlet {
     protected void doGet(HttpServletRequest reqest, HttpServletResponse response)
             throws ServletException, IOException {
         System.out.println("doGet");
-        response.getWriter().println("Hello World!");
+
+        response.getWriter().println("<html><head></head><body>");
+        response.getWriter().println("Session: " + reqest.getSession().getId());
+        response.getWriter().println((Integer.parseInt(reqest.getParameter("p1"))+Integer.parseInt(reqest.getParameter("p2"))));
+        response.getWriter().println("</body><html>");
     }
 
     @Override
@@ -22,8 +26,9 @@ public class SimpleServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("doPost");
+        resp.getWriter().println("");
     }
+
 
     @Override
     public void destroy() {
