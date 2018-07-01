@@ -15,7 +15,8 @@ public class SimpleServlet extends HttpServlet {
 
         response.getWriter().println("<html><head></head><body>");
         response.getWriter().println("Session: " + reqest.getSession().getId());
-        response.getWriter().println((Integer.parseInt(reqest.getParameter("p1"))+Integer.parseInt(reqest.getParameter("p2"))));
+        response.getWriter().println(reqest.getParameter("p1") + "+" + reqest.getParameter("p2") + "=");
+       // response.getWriter().println((Integer.parseInt(reqest.getParameter("p1"))+Integer.parseInt(reqest.getParameter("p2"))));
         response.getWriter().println("</body><html>");
     }
 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Moja strona</title>
+    <link rel="stylesheet" href="css/style.css"  />
+
+
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Paragraph changed.";
+        }
+        function validateForm() {
+            var inputs = document.getElementsByTagName("input");
+            for (var i = 0; i < inputs.length; i++) {
+                if(inputs[i].value == "") {
+                    inputs[i].className = "error";
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <img class="header_img" src="css/picsum.photos.jpg" width="100%" alt="header image"/>
+    <div class="nav">
+        <ul>
+            <li><a href="index.html">O mnie</a></li>
+            <li><a href="projekty.html">Projekty</a></li>
+            <li><a href="formularz.html">Formularz kontaktowy</a></li>
+        </ul>
+    </div>
+
+    <h1>Formularz kontaktowy</h1>
+
+    <div class="formContainer">
+        <form onsubmit="return validateForm()">
+            <label>Imię:</label>
+            <input type="text" name="name" id="name" value="cos"/>
+            <label>Nazwisko:</label>
+            <input type="text" name="surname"/>
+            <label>Jak podoba Ci się strona:</label>
+            <select name="like">
+                <option value="1">Bardzo</option>
+                <option value="2">Średnio</option>
+                <option value="3">Może być</option>
+                <option value="4">Jest bardzo słaba</option>
+            </select><br>
+
+
+            <input type="submit"  value="Wyslij">
+        </form>
+    </div>
+
+
+</body>
+</html>
