@@ -11,18 +11,22 @@
             document.getElementById("demo").innerHTML = "Paragraph changed.";
         }
         function validateForm() {
+            var valid = true;
             var inputs = document.getElementsByTagName("input");
             for (var i = 0; i < inputs.length; i++) {
                 if(inputs[i].value == "") {
-                    inputs[i].className = "error";
-                    return false;
+                    inputs[i].className = inputs[i].className + " error";
+                    valid = false;
+                }else {
+                    inputs[i].className = "";
                 }
             }
-            return true;
-        }
+            return valid;
+        }//<form onsubmit="return validateForm()">
     </script>
 </head>
 <body>
+    <div id="demo">Tekst test!!!</div>
     <img class="header_img" src="css/picsum.photos.jpg" width="100%" alt="header image"/>
     <div class="nav">
         <ul>
@@ -37,9 +41,9 @@
     <div class="formContainer">
         <form onsubmit="return validateForm()">
             <label>Imię:</label>
-            <input type="text" name="name" id="name" value="cos"/>
+            <input type="text" name="name" id="name" value="" placeholder="First name"/>
             <label>Nazwisko:</label>
-            <input type="text" name="surname"/>
+            <input type="text" name="surname" placeholder="Last name"/>
             <label>Jak podoba Ci się strona:</label>
             <select name="like">
                 <option value="1">Bardzo</option>
