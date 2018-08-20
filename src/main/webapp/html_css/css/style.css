@@ -118,3 +118,17 @@ input[type=submit]:hover {
     padding: 20px;
     border: 5px solid black;
 }
+
+/*
+.wrapper {
+    width: 900px;
+    margin: auto;
+}*/
+.container1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.innerDiv1 {
+    width: 33%;
+}
