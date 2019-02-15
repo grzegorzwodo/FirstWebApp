@@ -17,9 +17,6 @@ public class DodajServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest reqest, HttpServletResponse response) throws ServletException, IOException {
         response.getWriter().println((Integer.parseInt(reqest.getParameter("p1"))+Integer.parseInt(reqest.getParameter("p2"))));
-
-        MyFileWriter myFileWriter = new MyFileWriter();
-        myFileWriter.addRecordToFile("test", "test2", "E:\\sdacademy\\plik.txt");
     }
 
 
