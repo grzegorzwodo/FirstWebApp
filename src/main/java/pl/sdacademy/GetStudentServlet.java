@@ -21,6 +21,7 @@ public class GetStudentServlet extends HttpServlet {
 
         BufferedReader br = new BufferedReader(new FileReader("students.txt"));
         String line;
+        resp.setCharacterEncoding("UTF-8");
         resp.getWriter().println("<html><head><meta charset=\"UTF-8\"/></head><body>");
 
         resp.getWriter().println("<table>");
