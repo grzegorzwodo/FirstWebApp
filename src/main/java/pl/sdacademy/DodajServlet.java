@@ -16,7 +16,7 @@ public class DodajServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest reqest, HttpServletResponse response) throws ServletException, IOException {
-        response.getWriter().println((Integer.parseInt(reqest.getParameter("p1"))+Integer.parseInt(reqest.getParameter("p2"))));
+
     }
 
 

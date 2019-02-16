@@ -15,13 +15,6 @@ public class SimpleServlet extends HttpServlet {
 
         response.getWriter().println("<html><head></head><body>");
         response.getWriter().println("Session: " + reqest.getSession().getId());
-        Integer counter = (Integer) reqest.getSession().getAttribute("counter");
-        if(counter == null) {
-            counter = 0;
-        }
-        reqest.getSession().setAttribute("counter", ++counter);
-        response.getWriter().println("LICZNIK: " + counter);
-
         response.getWriter().println("</body><html>");
     }
 
