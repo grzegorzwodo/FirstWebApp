@@ -16,9 +16,29 @@
   </servlet>
 
   <servlet>
+    <servlet-name>createStudent</servlet-name>
+    <servlet-class>pl.sdacademy.CreateStudentServlet</servlet-class>
+  </servlet>
+
+  <servlet>
     <servlet-name>dodaj</servlet-name>
     <servlet-class>pl.sdacademy.DodajServlet</servlet-class>
   </servlet>
+
+  <servlet>
+    <servlet-name>getStudents</servlet-name>
+    <servlet-class>pl.sdacademy.GetStudentServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>getStudents</servlet-name>
+    <url-pattern>/students</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>createStudent</servlet-name>
+    <url-pattern>/createStudent</url-pattern>
+  </servlet-mapping>
 
   <servlet-mapping>
     <servlet-name>dodaj</servlet-name>
